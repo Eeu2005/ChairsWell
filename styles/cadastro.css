@@ -1,1 +1,43 @@
 @import url(main.css);
+select,
+select:focus-visible {
+  outline: 1px solid rgb(113, 113, 219);
+  background-color: var(--corFundo);
+  color: var(--corAzulEscuro);
+}
+select:focus-visible {
+  outline: 1px solid rgb(113, 113, 219);
+}
+select::-webkit-scrollbar {
+  width: 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+select::after {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.form {
+  padding: 38px;
+  width: min-content;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 2px 2px 1px #00000059;
+  color: var(--corAzulEscuro);
+}
+
+a,
+a:visited {
+  color: var(--corAzulEscuro);
+  text-decoration: none;
+}
+
+main {
+  gap: 5px;
+}

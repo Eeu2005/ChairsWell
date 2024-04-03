@@ -1,0 +1,20 @@
+footer {
+    font-weight: 300;
+    justify-content: space-around;
+    display: flex;
+    height: 5%;
+    width: 100%;
+    color: var(--corFundo);
+    background: linear-gradient(180deg, var(--corAzulEscuro), var(--corAzulClaro));
+}
+
+footer > h2 {
+    font-weight: 300;
+}
+
+footer > a > svg {
+    width: 30px;
+}
+.meunome{
+    /* position: absolute; */
+}

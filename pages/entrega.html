@@ -1,32 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
-    <link rel="stylesheet" href="../styles/cadastro.css">
-    <link rel="shortcut icon" href="../imgs/logo.png" type="image/x-icon">
-</head>
-<body>
-    <header class="topo">
-        <h1 class="titulo">ChairsWell</h1>
-        <nav>
-            <li><a href="index.html">Início</a></li>
-            <li>Sobre</a></li>
-            <li>Contato</li>
-            <li> <a href="entrega.html">Entrega</a></li>
-        </nav>
-        <div class="burger">
-            <div class="linha1"></div>
-            <div class="linha2"></div>
-            <div class="linha3"></div>
-        </div>
-    </header>
-    <form>
-        <input type="text" id="texto">
-        <input id="sla" type="button" value="enviar">
-    </form>
-    <p id=""></p>
-    <script src="../libs/pegarCep.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Cadastro</title>
+		<link rel="stylesheet" href="../styles/cadastro.css" />
+		<link rel="shortcut icon" href="../imgs/logo.png" type="image/x-icon" />
+	</head>
+
+	<body>
+		<header class="topo">
+			<a href="index.html"> <h1 class="titulo">ChairsWell</h1></a>
+			<nav>
+				<li><a href="index.html">Início</a></li>
+				<li><a href="#">Sobre</a></li>
+				<li><a href="#">Contato</a></li>
+				<li><a href="entrega.html">Entrega</a></li>
+			</nav>
+			<div class="burger">
+				<div class="linha1"></div>
+				<div class="linha2"></div>
+				<div class="linha3"></div>
+			</div>
+		</header>
+		<main>
+			<aside class="form">
+				<!--- <form> -->
+				<h2>Localização</h2>
+				<label for="cep">
+					<p>CEP</p>
+					<input type="text" name="" id="cep" />
+					<a
+						href="https://buscacepinter.correios.com.br/app/endereco/index.php"
+						target="_blank"
+						rel="noreferrer"
+						>Não Sabe o Seu Cep?</a
+					>
+				</label>
+				<label for="logradouro">
+					<p>Rua</p>
+					<input type="text" name="" id="logradouro" />
+				</label>
+				<label for="numero">
+					<p>Numero</p>
+					<input type="text" name="" id="numero" />
+				</label>
+				<label for="complemento">
+					<p>Complemento</p>
+					<input type="text" name="" id="complemento" />
+				</label>
+				<label for="bairro">
+					<p>Bairro</p>
+					<input type="text" name="" id="bairro" />
+				</label>
+				<label for="uf">
+					<p>Estado</p>
+					<input type="text" name="" id="uf" />
+				</label>
+				<label for="Cidade">
+					<p>Cidade</p>
+					<input type="text" name="" id="localidade" />
+				</label>
+				<!---  </form> -->
+			</aside>
+			<aside class="form">
+				<h2>Dados Pessoais</h2>
+				<label for="nome">
+					<p>Nome completo</p>
+					<input type="text" name="" id="nome" />
+				</label>
+				<label for="cpf">
+					<p>CPF</p>
+					<input type="text" name="" id="cpf" />
+				</label>
+				<label for="celular">
+					<p>Celular</p>
+					<input type="number" name="" id="cel" />
+				</label>
+				<label for="sexo">
+					<p>Sexo</p>
+					<select name="" id="sexo">
+						<option value="masculino">Masculino</option>
+						<option value="feminino">Feminino</option>
+						<option value="binario">Não Binario</option>
+					</select>
+				</label>
+				<label for="ano">
+					<p>Data Nascimento</p>
+					<select name="dia" id="dia_nasc">
+						<option value="NULL"></option>
+						<script>
+							for (x = 1; x <= 31; x++) {
+								document.write(`<option value="${x}">${x}</option>`);
+							}
+						</script>
+					</select>
+					<select name="mes" id="mes_nasc">
+						<option value="1">Janeiro</option>
+						<option value="2">Fevereiro</option>
+						<option value="3">Março</option>
+						<option value="4">Abril</option>
+						<option value="5">Maio</option>
+						<option value="6">Junho</option>
+						<option value="7">Julho</option>
+						<option value="8">Agosto</option>
+						<option value="9">Setembro</option>
+						<option value="10">Outubro</option>
+						<option value="11">Novembro</option>
+						<option value="12">Dezembro</option>
+					</select>
+					<select name="ano" id="ano-nas">
+						<option value="NULL"></option>
+						<script>
+							let data = new Date();
+							for (x = 1900; x <= data.getUTCFullYear(); x++) {
+								document.write(`<option value="${x}">${x}</option>`);
+							}
+						</script>
+					</select>
+				</label>
+			</aside>
+		</main>
+		<script src="../libs/script_navbar.js"></script>
+		<script src="../libs/pegarCep.js"></script>
+	</body>
 </html>
