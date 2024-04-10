@@ -1,13 +1,16 @@
 @import url(main.css);
+
 select,
 select:focus-visible {
   outline: 1px solid rgb(113, 113, 219);
   background-color: var(--corFundo);
   color: var(--corAzulEscuro);
 }
+
 select:focus-visible {
   outline: 1px solid rgb(113, 113, 219);
 }
+
 select::-webkit-scrollbar {
   width: 0;
 }
@@ -17,27 +20,46 @@ input::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
 }
+
 select::after {
   display: block;
   width: 20px;
   height: 20px;
 }
-
+.errado{
+outline:1px solid red;
+}
 .form {
   padding: 38px;
-  width: min-content;
+  width:fit-content;
   display: flex;
   flex-direction: column;
   box-shadow: 0px 2px 2px 1px #00000059;
   color: var(--corAzulEscuro);
 }
 
+
+#enviar {
+  width: 100%;
+  margin-top: 20px;
+}
+
 a,
 a:visited {
-  color: var(--corAzulEscuro);
   text-decoration: none;
 }
 
+main > button {
+  border-radius: 100px;
+  width: 100px;
+  height: 25px;
+  border: none;
+  background-color: var(--corAzulEscuro);
+  color: var(--corFundo);
+}
+
 main {
+  align-items: center;
+  flex-direction: row-reverse;
   gap: 5px;
 }

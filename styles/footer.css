@@ -1,11 +1,15 @@
+@import url(main.css);
+
 footer {
-    font-weight: 300;
+    align-items: center;
+    margin-top: 5%;
+    height: 100px;
     justify-content: space-around;
     display: flex;
-    height: 5%;
     width: 100%;
     color: var(--corFundo);
-    background: linear-gradient(180deg, var(--corAzulEscuro), var(--corAzulClaro));
+    background: var(--degrade);
+    box-shadow: 0 -4px 4px 0 rgba(0, 0, 0, 0.466);
 }
 
 footer > h2 {
@@ -13,10 +17,27 @@ footer > h2 {
 }
 
 footer > a > svg {
+    cursor: pointer;
     width: 30px;
+    fill: var(--corFundo);
+}
+
+footer > a > svg:hover {
+    animation: animacao 0.5s;
+    fill: var(--corAzulClaro);
 }
 
 .meunome {
     background-color: var(--corAzulClaro);
     color: var(--corFundo);
+}
+
+@keyframes animacao {
+    from {
+        transform: rotateZ(0deg);
+    }
+
+    to {
+        transform: rotateZ(360deg);
+    }
 }

@@ -19,6 +19,7 @@ html {
   --corFundo: #fdddcd;
   --corAzulEscuro: #00657f;
   --corAzulClaro: #0090d5;
+  --degrade:linear-gradient(180deg, var(--corAzulEscuro), var(--corAzulClaro));
 }
 
 body {
@@ -55,15 +56,16 @@ body {
 .titulo {
   font-weight: 200;
   font-size: 5cap;
-  color: #00657f;
   font-family: alura;
 }
 a,
 a:visited {
-  color: var(--corAzulEscuro);
+  color: currentColor;
   text-decoration: none;
 }
 .topo {
+  color: var(--corFundo);
+  background: var(--degrade);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.226);
   align-items: center;
   display: flex;
@@ -76,7 +78,7 @@ a:visited {
 }
 
 .topo > div:has(.titulo) {
-  gap: 20px;
+  gap: 20px; color: var(--corFundo);
   display: flex;
 }
 
@@ -85,7 +87,7 @@ nav {
   cursor: pointer;
   gap: 20px;
   font-size: 40px;
-  color: var(--corAzulEscuro);
+ 
   font-family: kanit;
   font-weight: 100;
   list-style: none;
@@ -157,7 +159,7 @@ main {
   border-radius: 5%;
 }
 
-.produto > button {
+button {
   color: var(--corFundo);
   background-color: var(--corAzulClaro);
   border: none;
@@ -166,8 +168,10 @@ main {
   width: 250px;
   height: 31px;
 }
-
-.produto > button:hover {
+#meunome{
+  cursor: pointer;
+}
+ button:hover {
   cursor: pointer;
   color: var(--corAzulEscuro);
   background-color: white;

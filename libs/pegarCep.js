@@ -7,7 +7,6 @@ async function pegarCep (id) {
     return await response.json();
 }
 function checarInput (obj) {
-
     for (let x = 0; x < inputs.length; x++)
     {
         if (obj[inputs[x].id] != undefined)
@@ -15,7 +14,6 @@ function checarInput (obj) {
             inputs[x].value = obj[inputs[x].id];
 
         }
-
     }
 }
 inputCep.addEventListener("input" || "click", async () => {
