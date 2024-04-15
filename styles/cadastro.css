@@ -1,15 +1,11 @@
 @import url(main.css);
 
-select,
-select:focus-visible {
+select {
   outline: 1px solid rgb(113, 113, 219);
   background-color: var(--corFundo);
   color: var(--corAzulEscuro);
 }
 
-select:focus-visible {
-  outline: 1px solid rgb(113, 113, 219);
-}
 
 select::-webkit-scrollbar {
   width: 0;
